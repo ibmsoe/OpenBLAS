@@ -23,6 +23,7 @@ endif
 
 
 FLAMEPATH	= $(HOME)/flame/lib
+MASSPATH        = /opt/ibm/xlmass/8.1.3/lib
 
 #ifeq ($(CORE), CELL)
 #CELL_SDK_ROOT = /opt/IBM/cell-sdk-1.1/sysroot/usr
@@ -36,6 +37,11 @@ ifdef BINARY64
 else
 # COMPILER_PREFIX = powerpc-linux-
 endif
+endif
+
+ifeq ($(CORE), POWER8)
+COMMON_OPT += -mveclibabi=mass -ftree-vectorize -funsafe-math-optimizations -DUSE_MASS
+EXTRALIB += -L$(MASSPATH) -lmass -lmassvp8 -lmass_simdp8
 endif
 
 ifdef BINARY64
