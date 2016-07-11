@@ -1,0 +1,134 @@
+SAMAXKERNEL  = ../mips/amax.c
+DAMAXKERNEL  = ../mips/amax.c
+CAMAXKERNEL  = ../mips/zamax.c
+ZAMAXKERNEL  = ../mips/zamax.c
+
+SAMINKERNEL  = ../mips/amin.c
+DAMINKERNEL  = ../mips/amin.c
+CAMINKERNEL  = ../mips/zamin.c
+ZAMINKERNEL  = ../mips/zamin.c
+
+SMAXKERNEL   = ../mips/max.c
+DMAXKERNEL   = ../mips/max.c
+
+SMINKERNEL   = ../mips/min.c
+DMINKERNEL   = ../mips/min.c
+
+ISAMAXKERNEL = ../mips/iamax.c
+IDAMAXKERNEL = ../mips/iamax.c
+ICAMAXKERNEL = ../mips/izamax.c
+IZAMAXKERNEL = ../mips/izamax.c
+
+ISAMINKERNEL = ../mips/iamin.c
+IDAMINKERNEL = ../mips/iamin.c
+ICAMINKERNEL = ../mips/izamin.c
+IZAMINKERNEL = ../mips/izamin.c
+
+ISMAXKERNEL  = ../mips/imax.c
+IDMAXKERNEL  = ../mips/imax.c
+
+ISMINKERNEL  = ../mips/imin.c
+IDMINKERNEL  = ../mips/imin.c
+
+SASUMKERNEL  = ../mips/asum.c
+DASUMKERNEL  = ../mips/asum.c
+CASUMKERNEL  = ../mips/zasum.c
+ZASUMKERNEL  = ../mips/zasum.c
+
+SAXPYKERNEL  = ../mips/axpy.c
+DAXPYKERNEL  = ../mips/axpy.c
+CAXPYKERNEL  = ../mips/zaxpy.c
+ZAXPYKERNEL  = ../mips/zaxpy.c
+
+SCOPYKERNEL  = ../mips/copy.c
+DCOPYKERNEL  = ../mips/copy.c
+CCOPYKERNEL  = ../mips/zcopy.c
+ZCOPYKERNEL  = ../mips/zcopy.c
+
+SDOTKERNEL   = ../mips/dot.c
+DDOTKERNEL   = ../mips/dot.c
+CDOTKERNEL   = ../mips/zdot.c
+ZDOTKERNEL   = ../mips/zdot.c
+
+SNRM2KERNEL  = ../mips/nrm2.c
+DNRM2KERNEL  = ../mips/nrm2.c
+CNRM2KERNEL  = ../mips/znrm2.c
+ZNRM2KERNEL  = ../mips/znrm2.c
+
+SROTKERNEL   = ../mips/rot.c
+DROTKERNEL   = ../mips/rot.c
+CROTKERNEL   = ../mips/zrot.c
+ZROTKERNEL   = ../mips/zrot.c
+
+SSCALKERNEL  = ../mips/scal.c
+DSCALKERNEL  = ../mips/scal.c
+CSCALKERNEL  = ../mips/zscal.c
+ZSCALKERNEL  = ../mips/zscal.c
+
+SSWAPKERNEL  = ../mips/swap.c
+DSWAPKERNEL  = ../mips/swap.c
+CSWAPKERNEL  = ../mips/zswap.c
+ZSWAPKERNEL  = ../mips/zswap.c
+
+SGEMVNKERNEL = ../mips/gemv_n.c
+DGEMVNKERNEL = ../mips/gemv_n.c
+CGEMVNKERNEL = ../mips/zgemv_n.c
+ZGEMVNKERNEL = ../mips/zgemv_n.c
+
+SGEMVTKERNEL = ../mips/gemv_t.c
+DGEMVTKERNEL = ../mips/gemv_t.c
+CGEMVTKERNEL = ../mips/zgemv_t.c
+ZGEMVTKERNEL = ../mips/zgemv_t.c
+
+STRMMKERNEL  = ../generic/trmmkernel_2x2.c
+DTRMMKERNEL  = ../generic/trmmkernel_2x2.c
+CTRMMKERNEL  = ../generic/ztrmmkernel_2x2.c
+ZTRMMKERNEL  = ../generic/ztrmmkernel_2x2.c
+
+SGEMMKERNEL    = ../mips/sgemm_kernel_8x8_msa.c
+SGEMMONCOPY    = ../mips/sgemm_ncopy_8_msa.c
+SGEMMOTCOPY    = ../mips/sgemm_tcopy_8_msa.c
+SGEMMONCOPYOBJ = sgemm_oncopy.o
+SGEMMOTCOPYOBJ = sgemm_otcopy.o
+
+DGEMMKERNEL    = ../mips/dgemm_kernel_8x4_msa.c
+DGEMMINCOPY    = ../mips/dgemm_ncopy_8_msa.c
+DGEMMITCOPY    = ../mips/dgemm_tcopy_8_msa.c
+DGEMMONCOPY    = ../mips/dgemm_ncopy_4_msa.c
+DGEMMOTCOPY    = ../mips/dgemm_tcopy_4_msa.c
+DGEMMINCOPYOBJ = dgemm_incopy.o
+DGEMMITCOPYOBJ = dgemm_itcopy.o
+DGEMMONCOPYOBJ = dgemm_oncopy.o
+DGEMMOTCOPYOBJ = dgemm_otcopy.o
+
+CGEMMKERNEL    = ../generic/zgemmkernel_2x2.c
+CGEMMONCOPY    = ../generic/zgemm_ncopy_2.c
+CGEMMOTCOPY    = ../generic/zgemm_tcopy_2.c
+CGEMMONCOPYOBJ = cgemm_oncopy.o
+CGEMMOTCOPYOBJ = cgemm_otcopy.o
+
+ZGEMMKERNEL    = ../generic/zgemmkernel_2x2.c
+ZGEMMONCOPY    = ../generic/zgemm_ncopy_2.c
+ZGEMMOTCOPY    = ../generic/zgemm_tcopy_2.c
+ZGEMMONCOPYOBJ = zgemm_oncopy.o
+ZGEMMOTCOPYOBJ = zgemm_otcopy.o
+
+STRSMKERNEL_LN = ../mips/strsm_kernel_LN_8x8_msa.c
+STRSMKERNEL_LT = ../mips/strsm_kernel_LT_8x8_msa.c
+STRSMKERNEL_RN = ../mips/strsm_kernel_RN_8x8_msa.c
+STRSMKERNEL_RT = ../mips/strsm_kernel_RT_8x8_msa.c
+
+DTRSMKERNEL_LN = ../mips/dtrsm_kernel_LN_8x4_msa.c
+DTRSMKERNEL_LT = ../mips/dtrsm_kernel_LT_8x4_msa.c
+DTRSMKERNEL_RN = ../mips/dtrsm_kernel_RN_8x4_msa.c
+DTRSMKERNEL_RT = ../mips/dtrsm_kernel_RT_8x4_msa.c
+
+CTRSMKERNEL_LN = ../generic/trsm_kernel_LN.c
+CTRSMKERNEL_LT = ../generic/trsm_kernel_LT.c
+CTRSMKERNEL_RN = ../generic/trsm_kernel_RN.c
+CTRSMKERNEL_RT = ../generic/trsm_kernel_RT.c
+
+ZTRSMKERNEL_LN = ../generic/trsm_kernel_LN.c
+ZTRSMKERNEL_LT = ../generic/trsm_kernel_LT.c
+ZTRSMKERNEL_RN = ../generic/trsm_kernel_RN.c
+ZTRSMKERNEL_RT = ../generic/trsm_kernel_RT.c
