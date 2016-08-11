@@ -46,7 +46,8 @@ On X86 box, compile this library for loongson3a CPU with loongcc (based on Open6
 ### Compile with MASS Support on Power CPU (Optional dependency)
 
 [IBM MASS](http://www-01.ibm.com/software/awdtools/mass/linux/mass-linux.html) library consists of a set of mathematical functions for C, C++, and
-Fortran-language applications that are tuned for optimum performance on POWER architectures. MASS library can be installed as below -
+Fortran-language applications that are tuned for optimum performance on POWER architectures. OpenBLAS with MASS requires 64-bit, little-endian OS on POWER.
+The library can be installed as below -
 
  * On Ubuntu:
 
