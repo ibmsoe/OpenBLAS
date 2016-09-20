@@ -655,21 +655,8 @@ endif
 ifeq ($(F_COMPILER), IBM)
 CCOMMON_OPT += -DF_INTERFACE_IBM
 # FCOMMON_OPT	+= -qarch=440
-
-#hack to add -lgfortran
-ifeq ($(FC), gfortran)
-EXTRALIB += -lgfortran
-endif 
 ifdef BINARY64
-
-#f_check is doing blind grab for vendor name
-#then storing as F_COMPILER.  gfortran and xlf are
-#listed as IBM, q64 only works on xlf
-ifeq ($(FC), gfortran)
-FCOMMON_OPT += -m64 
-else
 FCOMMON_OPT += -q64
-endif
 ifdef INTERFACE64
 ifneq ($(INTERFACE64), 0)
 FCOMMON_OPT += -qintsize=8
@@ -679,12 +666,7 @@ else
 FCOMMON_OPT += -q32
 endif
 ifeq ($(USE_OPENMP), 1)
-#same as above, need to see if using xlf or gfortran
-ifeq ($(FC), gfortran)
-FCOMMON_OPT += -fopenmp
-else
 FCOMMON_OPT += -openmp
-endif
 endif
 endif
 
