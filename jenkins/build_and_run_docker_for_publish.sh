@@ -28,7 +28,7 @@ git checkout $PKGBUILD_COMMIT
 cd $git_root
 
 # Use image name based on Dockerfile location checksum
-DOCKER_IMAGE_NAME=$(basename $DOCKERFILE_DIR)_$(sha1sum $DOCKERFILE_DIR/Dockerfile | cut -f1 -d\ )
+DOCKER_IMAGE_NAME=$(basename $DOCKERFILE_DIR)_$(sha1sum $DOCKERFILE_DIR/Dockerfile.powerai | cut -f1 -d\ )
 
 # Make sure docker image has been built. Should be instantaneous if so.
 docker build -t $DOCKER_IMAGE_NAME $DOCKERFILE_DIR
