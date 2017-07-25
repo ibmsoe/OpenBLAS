@@ -22,7 +22,7 @@ cd $PKG_DIR/pkgbuild/openblas
 
 # The openblas repository is mounted into our Docker image, but read-only.
 # We clone into a directory inside Docker (this is faster than cp).
-git clone /var/local/jenkins/openblas
+git clone /var/local/jenkins/openblas libopenblas
 
 # Set up the directory where our test output is going to go.
 OUTPUT_DIR=`mktemp -d`
