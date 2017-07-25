@@ -40,9 +40,9 @@ RUN apt-get update && apt-get install -y \
 # POWER architectures. 
 ##################
 
-RUN wget -q http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/ubuntu/public.gpg -O- | sudo apt-key add - echo "deb http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/ubuntu/ trusty main" | sudo tee /etc/apt/sources.list.d/ibm-xl-compiler-eval.list 
+RUN wget -q http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/ubuntu/public.gpg -O- | apt-key add - echo "deb http://public.dhe.ibm.com/software/server/POWER/Linux/xl-compiler/eval/ppc64le/ubuntu/ trusty main" | tee /etc/apt/sources.list.d/ibm-xl-compiler-eval.list 
 
-RUN sudo apt-get update && sudo apt-get install -y libxlmass-devel.8.1.3
+RUN apt-get update && apt-get install -y libxlmass-devel.8.1.3
 
 
 ##################
